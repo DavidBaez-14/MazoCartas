@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mazo de Cartas</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header class="encabezado">
+        <h1 class="titulo">Mazo de Cartas</h1>
+        <p class="subtitulo" style="font-size: 1.7rem;">Showdown</p>
+    </header>
+
+    <main class="contenedor">
+        <section class="zona-juego">
+            <h2 class="seccion-titulo">Cartas</h2>
+            <div class="rejilla-cartas" id="rejilla-cartas">
+                <!-- Imágenes de referencia del mazo local (no forman el JSON) -->
+                <button class="carta-boton" data-numero="1"><img src="./img/1.png" alt="Carta 1"></button>
+                <button class="carta-boton" data-numero="2"><img src="./img/2.png" alt="Carta 2"></button>
+                <button class="carta-boton" data-numero="3"><img src="./img/3.png" alt="Carta 3"></button>
+                <button class="carta-boton" data-numero="4"><img src="./img/4.png" alt="Carta 4"></button>
+                <button class="carta-boton" data-numero="5"><img src="./img/5.png" alt="Carta 5"></button>
+                <button class="carta-boton" data-numero="6"><img src="./img/6.png" alt="Carta 6"></button>
+                <button class="carta-boton" data-numero="7"><img src="./img/7.png" alt="Carta 7"></button>
+                <button class="carta-boton" data-numero="8"><img src="./img/8.png" alt="Carta 8"></button>
+                <button class="carta-boton" data-numero="9"><img src="./img/9.png" alt="Carta 9"></button>
+                <button class="carta-boton" data-numero="10"><img src="./img/10.png" alt="Carta 10"></button>
+                <button class="carta-boton" data-numero="11"><img src="./img/11.png" alt="Carta 11"></button>
+                <button class="carta-boton" data-numero="12"><img src="./img/12.png" alt="Carta 12"></button>
+                <button class="carta-boton" data-numero="13"><img src="./img/13.png" alt="Carta 13"></button>
+            </div>
+        </section>
+
+        <aside class="panel-lateral">
+            <section class="bloque tabla-cartas">
+                <h3 class="bloque-titulo">Tabla de cartas (desde JSON y agregadas)</h3>
+                <table class="tabla" id="tabla-cartas">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Número</th>
+                            <th>Carta</th>
+                            <th>Cantidad</th>
+                            <th class="acciones-columna">Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-tabla">
+                        <!-- filas dinámicas -->
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="bloque registro-cartas">
+                <h3 class="bloque-titulo">Registro de cartas</h3>
+                <form id="formulario-cartas" class="formulario">
+                    <div class="campo">
+                        <label for="numero">Número</label>
+                        <input type="number" id="numero" name="numero" min="1" required>
+                    </div>
+                    <div class="campo">
+                        <label for="carta">Carta</label>
+                        <input type="text" id="carta" name="carta" placeholder="As, Dos, Tres..." required>
+                    </div>
+                    <div class="campo">
+                        <label for="cantidad">Cantidad</label>
+                        <input type="number" id="cantidad" name="cantidad" min="0" value="0" required>
+                    </div>
+                    <div class="acciones">
+                        <button type="submit" class="boton-principal">Guardar</button>
+                        <button type="button" id="btn-limpiar" class="boton-secundario">Limpiar</button>
+                    </div>
+                </form>
+            </section>
+        </aside>
+    </main>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>

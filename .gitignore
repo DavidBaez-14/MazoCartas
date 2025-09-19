@@ -1,0 +1,17 @@
+# Sistema operativo
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Dependencias (por si a futuro)
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
+
+# Cachés Python (por servidor local opcional)
+__pycache__/
+*.pyc
