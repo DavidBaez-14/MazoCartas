@@ -16,7 +16,7 @@
         <section class="zona-juego">
             <h2 class="seccion-titulo">Cartas</h2>
             <div class="rejilla-cartas" id="rejilla-cartas">
-                <!-- Imágenes de referencia del mazo local (no forman el JSON) -->
+              
                 <button class="carta-boton" data-numero="1"><img src="./img/1.png" alt="Carta 1"></button>
                 <button class="carta-boton" data-numero="2"><img src="./img/2.png" alt="Carta 2"></button>
                 <button class="carta-boton" data-numero="3"><img src="./img/3.png" alt="Carta 3"></button>
@@ -40,7 +40,6 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Número</th>
                             <th>Carta</th>
                             <th>Cantidad</th>
                             <th class="acciones-columna">Acción</th>
@@ -57,15 +56,11 @@
                 <form id="formulario-cartas" class="formulario">
                     <div class="campo">
                         <label for="numero">Número</label>
-                        <input type="number" id="numero" name="numero" min="1" required>
+                        <input type="number" id="numero" name="numero" min="1" max="13" required>
                     </div>
                     <div class="campo">
                         <label for="carta">Carta</label>
                         <input type="text" id="carta" name="carta" placeholder="As, Dos, Tres..." required>
-                    </div>
-                    <div class="campo">
-                        <label for="cantidad">Cantidad</label>
-                        <input type="number" id="cantidad" name="cantidad" min="0" value="0" required>
                     </div>
                     <div class="acciones">
                         <button type="submit" class="boton-principal">Guardar</button>

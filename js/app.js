@@ -51,8 +51,6 @@
     th.scope = 'row';
     th.textContent = String(indice + 1);
 
-    var tdNumero = document.createElement('td');
-    tdNumero.textContent = item.numero;
 
     var tdCarta = document.createElement('td');
     tdCarta.textContent = item.carta;
@@ -84,8 +82,7 @@
 
   function renderizarTabla(){
     if(!cuerpoTabla){ return; }
-    // Ya no ordenamos automáticamente para que las nuevas queden al final
-
+    
     while(cuerpoTabla.firstChild){
       cuerpoTabla.removeChild(cuerpoTabla.firstChild);
     }
@@ -134,7 +131,6 @@
   }
 
   function resaltarFilaPorNumero(numero){
-    // Buscar posición actual (puede cambiar si más adelante se ordena)
     var idx = buscarIndicePorNumero(numero);
     if(idx < 0) return;
     var filas = cuerpoTabla ? cuerpoTabla.querySelectorAll('tr') : [];
@@ -272,6 +268,7 @@
     cargarDatosIniciales(function(){
       renderizarTabla();
       registrarClicksCartas();
+      
     });
   }
 
